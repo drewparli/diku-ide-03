@@ -1,5 +1,5 @@
 /* Run the main function after the index page loads */
-d3.select(window).on('load', main("data/trump-tree.json"));
+d3.select(window).on('load', main("trump-tree.json"));
 
 function main(filename) {d3.json(filename, visualize)}
 
