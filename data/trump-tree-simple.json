@@ -1,0 +1,80 @@
+{
+  "name": "Donald Trump",
+  "details": {"dob": "1974-06-14",
+              "loc": "New York City"},
+  "children": [
+    {
+      "name": "Ivana Trump",
+      "children": [
+        {
+          "name": "Donald Trump Jr.",
+          "children": [
+            {
+              "name": "Vanessa Trump",
+              "children": [
+                {
+                  "name": "Kai Madison"
+                },
+                {
+                  "name": "Donald III"
+                },
+                {
+                  "name": "Chloe Sophia"
+                },
+                {
+                  "name": "Tristan Milos"
+                },
+                {
+                  "name": "Spencer Frederick"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ivanka Trump",
+          "children": [
+            {
+              "name": "Jared Kushner",
+              "children": [
+                {
+                  "name": "Arabella Rose"
+                },
+                {
+                  "name": "Joseph Frederick"
+                },
+                {
+                  "name": "Theodore James"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Eric Trump",
+          "children": [
+            {
+              "name": "Lara Yunaska"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Marla Maples",
+      "children": [
+        {
+          "name": "Tiffany Trump"
+        }
+      ]
+    },
+    {
+      "name": "Melanie Trump",
+      "children": [
+        {
+          "name": "Baron Trump"
+        }
+      ]
+    }
+  ]
+}
