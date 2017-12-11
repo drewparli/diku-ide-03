@@ -8,17 +8,17 @@ function visualize(data) {
 
   console.log("Data", data)
 
-  var colors = d3.scaleOrdinal(d3.schemeCategory20)
+  var colors = d3.scaleOrdinal(d3.schemeCategory10)
 
   var simulation = d3.forceSimulation()
     .force("link",
           d3.forceLink()
             .id(function(d) {return d.name})
-            .strength(3))
+            .strength(1))
     .force("collide", d3.forceCollide()
                         .radius(function(d) {return d.gen*24})
                         .iterations(90))
-    .force("charge", d3.forceManyBody().strength(-1200))
+    .force("charge", d3.forceManyBody().strength(-1000))
     .force("center", d3.forceCenter(1600/2, 800/2))
     .force("y", d3.forceY(0))
     .force("x", d3.forceX(0))
@@ -38,7 +38,10 @@ function visualize(data) {
 
     .enter()
     .append("line")
-    .attr("class", "linkOff")
+    .attr("class", function(d) {
+      console.log(d, d.hidden)
+      if (d.hidden) {return "linkHidden"} else {return "linkShown"}
+    })
 
   var node = everything.append("g")
     .attr("id", "nodes")
@@ -60,7 +63,18 @@ function visualize(data) {
         if (d.blood) {return "personBlood"} else {return "personNotBlood"}
       } else {return "partnership"}
     })
-    .style("stroke-width", function(d) { if (d.type == "partnership") {return 4}})
+    .style("stroke", function(d) {
+      if (d.type == "partnership") {return "rgba(0,0,0,1)"}
+        else {return colors(d.gen)}
+    })
+    .style("stroke-width", function(d) {
+      if (d.type == "partnership") {return 3}
+        else {return 0}
+    })
+    .style("fill", function(d) {
+      if (d.type == "partnership") {return "rgba(255, 255, 255, 1)"}
+        else {var c = colors(d.gen); console.log(c); return colors(d.gen)}
+    })
 
   node.append("text")
     .attr("class", "name mono")

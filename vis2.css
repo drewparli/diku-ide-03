@@ -106,16 +106,18 @@ th {
 
 .partnership {
   fill: rgba(255,255,255,1);
-  stroke: black;
-  stroke-width: 4px;
 }
 
-.linkOff {
-  stroke: grey;
+.linkHighlight {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.linkShown {
+  stroke: lightgrey;
   stroke-width: 1px;
 }
 
-.linkOn {
-  stroke: black;
-  stroke-width: 2px;
+.linkHidden {
+  stroke-width: 0px;
 }

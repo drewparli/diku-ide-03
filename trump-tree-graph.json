@@ -28,39 +28,43 @@
     {"name": "Eric-Lara",         "gen":2, "blood":true,  "type": "partnership"}
   ],
   "links" : [
-    {"source": "Donald Trump", "target": "Donald-Ivana"},
-    {"source": "Ivana Trump",  "target": "Donald-Ivana"},
+    {"source": "Donald Trump",      "target": "Donald-Ivana",       "hidden":false},
+    {"source": "Ivana Trump",       "target": "Donald-Ivana",       "hidden":false},
 
-    {"source": "Donald Trump", "target": "Ivana Trump"},
-    {"source": "Donald Trump", "target": "Marla Maples"},
-    {"source": "Donald Trump", "target": "Melanie Trump"},
+    {"source": "Donald-Ivana",      "target": "Donald Trump Jr",    "hidden":false},
+    {"source": "Donald-Ivana",      "target": "Ivanka Trump",       "hidden":false},
+    {"source": "Donald-Ivana",      "target": "Eric Trump",         "hidden":false},
 
-    {"source": "Donald-Ivana", "target": "Donald Trump Jr"},
-    {"source": "Donald-Ivana", "target": "Ivanka Trump"},
-    {"source": "Donald-Ivana", "target": "Eric Trump"},
+    {"source": "Donald Trump Jr",   "target": "DonaldJr-Vanessa",   "hidden":false},
+    {"source": "Vanessa Trump",     "target": "DonaldJr-Vanessa",   "hidden":false},
 
-    {"source": "Donald Trump Jr", "target": "DonaldJr-Vanessa"},
-    {"source": "Vanessa Trump",   "target": "DonaldJr-Vanessa"},
+    {"source": "DonaldJr-Vanessa",  "target": "Kai Madison",        "hidden":false},
+    {"source": "DonaldJr-Vanessa",  "target": "Donald III",         "hidden":false},
+    {"source": "DonaldJr-Vanessa",  "target": "Chloe Sophia",       "hidden":false},
+    {"source": "DonaldJr-Vanessa",  "target": "Tristan Milos",      "hidden":false},
+    {"source": "DonaldJr-Vanessa",  "target": "Spencer Frederick",  "hidden":false},
 
-    {"source": "DonaldJr-Vanessa", "target": "Kai Madison"},
-    {"source": "DonaldJr-Vanessa", "target": "Donald III"},
-    {"source": "DonaldJr-Vanessa", "target": "Chloe Sophia"},
-    {"source": "DonaldJr-Vanessa", "target": "Tristan Milos"},
-    {"source": "DonaldJr-Vanessa", "target": "Spencer Frederick"},
+    {"source": "Ivanka Trump",      "target": "Ivanka-Jared",       "hidden":false},
+    {"source": "Jared Kushner",     "target": "Ivanka-Jared",       "hidden":false},
 
-    {"source": "Ivanka Trump",  "target": "Ivanka-Jared"},
-    {"source": "Jared Kushner", "target": "Ivanka-Jared"},
+    {"source": "Ivanka-Jared",      "target": "Arabella Rose",      "hidden":false},
+    {"source": "Ivanka-Jared",      "target": "Joseph Frederick",   "hidden":false},
+    {"source": "Ivanka-Jared",      "target": "Theodore James",     "hidden":false},
+    {"source": "Eric Trump",        "target": "Eric-Lara",          "hidden":false},
+    {"source": "Lara Yunaska",      "target": "Eric-Lara",          "hidden":false},
+    {"source": "Donald Trump",      "target": "Donald-Marla",       "hidden":false},
+    {"source": "Marla Maples",      "target": "Donald-Marla",       "hidden":false},
+    {"source": "Donald-Marla",      "target": "Tiffany Trump",      "hidden":false},
+    {"source": "Donald Trump",      "target": "Donald-Melanie",     "hidden":false},
+    {"source": "Melanie Trump",     "target": "Donald-Melanie",     "hidden":false},
+    {"source": "Donald-Melanie",    "target": "Baron Trump",        "hidden":false},
 
-    {"source": "Ivanka-Jared", "target": "Arabella Rose"},
-    {"source": "Ivanka-Jared", "target": "Joseph Frederick"},
-    {"source": "Ivanka-Jared", "target": "Theodore James"},
-    {"source": "Eric Trump",   "target": "Eric-Lara"},
-    {"source": "Lara Yunaska", "target": "Eric-Lara"},
-    {"source": "Donald Trump", "target": "Donald-Marla"},
-    {"source": "Marla Maples", "target": "Donald-Marla"},
-    {"source": "Donald-Marla", "target": "Tiffany Trump"},
-    {"source": "Donald Trump", "target": "Donald-Melanie"},
-    {"source": "Melanie Trump", "target": "Donald-Melanie"},
-    {"source": "Donald-Melanie", "target": "Baron Trump"}
+    {"source": "Donald Trump",      "target": "Ivana Trump",        "hidden":true},
+    {"source": "Donald Trump",      "target": "Marla Maples",       "hidden":true},
+    {"source": "Donald Trump",      "target": "Melanie Trump",      "hidden":true},
+
+    {"source": "Ivanka Trump",      "target": "Jared Kushner",      "hidden":true},
+    {"source": "Eric Trump",        "target": "Lara Yunaska",       "hidden":true},
+    {"source": "Donald Trump Jr",   "target": "Vanessa Trump",      "hidden":true}
   ]
 }
