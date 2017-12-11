@@ -1,0 +1,119 @@
+body {
+  background: lightgray;
+  width: 100%;
+  /*max-width: 600px;*/
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+h1 {
+  color: darkred;
+  font-size: x-large;
+  margin-top: 0px;
+}
+
+h2 {
+  color: darkred;
+  font-size: large;
+  /*font-weight: normal;*/
+  margin-top: 30px;
+  margin-bottom: 0px
+}
+
+h3 {
+  color: darkred;
+  font-weight: normal;
+}
+
+p {
+  color: black;
+  font-size: medium;
+  margin-top: 0px;
+}
+
+a {
+  color: black;
+  font-weight: normal;
+  /*text-decoration: none;*/
+}
+
+img {
+  max-width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+th {
+  text-align: left;
+}
+
+.content {
+  background: white;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 100px;
+}
+
+.mono {
+  font-family: monospace;
+  font-size: large;
+  font-style: normal;
+  font-weight: normal;
+
+}
+
+.part {
+  font-style: italic;
+}
+
+.vis {
+  background: white;
+  margin-top: 20px;
+  max-width: 1600px;
+}
+
+
+
+
+
+.name {
+  font-size: 8pt;
+  font-style: bold;
+}
+
+.personBlood {
+  fill: darkred;
+  stroke: rgba(0,0,0,0.5);
+}
+
+.personNotBlood {
+  fill: lightgrey ;
+  stroke: grey;
+}
+
+.partnership {
+  fill: rgba(0,0,0,0);
+
+}
+
+.linkOff {
+  stroke: grey;
+  stroke-width: 1px;
+}
+
+.linkOn {
+  stroke: black;
+  stroke-width: 2px;
+}

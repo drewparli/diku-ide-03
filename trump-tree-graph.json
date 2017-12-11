@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {"name": "Donald Trump",      "gen":3, "blood":true,  "type": "person"},
+    {"name": "Ivana Trump",       "gen":3, "blood":false, "type": "person"},
+    {"name": "Marla Maples",      "gen":3, "blood":false, "type": "person"},
+    {"name": "Melanie Trump",     "gen":3, "blood":false, "type": "person"},
+    {"name": "Donald Trump Jr",   "gen":2, "blood":true,  "type": "person"},
+    {"name": "Vanessa Trump",     "gen":2, "blood":false, "type": "person"},
+    {"name": "Eric Trump",        "gen":2, "blood":true,  "type": "person"},
+    {"name": "Lara Yunaska",      "gen":2, "blood":false, "type": "person"},
+    {"name": "Ivanka Trump",      "gen":2, "blood":true,  "type": "person"},
+    {"name": "Jared Kushner",     "gen":2, "blood":false, "type": "person"},
+    {"name": "Kai Madison",       "gen":1, "blood":true,  "type": "person"},
+    {"name": "Donald III",        "gen":1, "blood":true,  "type": "person"},
+    {"name": "Chloe Sophia",      "gen":1, "blood":true,  "type": "person"},
+    {"name": "Tristan Milos",     "gen":1, "blood":true,  "type": "person"},
+    {"name": "Spencer Frederick", "gen":1, "blood":true,  "type": "person"},
+    {"name": "Arabella Rose",     "gen":1, "blood":true,  "type": "person"},
+    {"name": "Joseph Frederick",  "gen":1, "blood":true,  "type": "person"},
+    {"name": "Theodore James",    "gen":1, "blood":true,  "type": "person"},
+    {"name": "Tiffany Trump",     "gen":1, "blood":true,  "type": "person"},
+    {"name": "Baron Trump",       "gen":1, "blood":true,  "type": "person"},
+    {"name": "Donald-Ivana",      "gen":2, "blood":true,  "type": "partnership"},
+    {"name": "Donald-Marla",      "gen":2, "blood":true,  "type": "partnership"},
+    {"name": "Donald-Melanie",    "gen":2, "blood":true,  "type": "partnership"},
+    {"name": "DonaldJr-Vanessa",  "gen":2, "blood":true,  "type": "partnership"},
+    {"name": "Ivanka-Jared",      "gen":2, "blood":true,  "type": "partnership"},
+    {"name": "Eric-Lara",         "gen":2, "blood":true,  "type": "partnership"}
+  ],
+  "links" : [
+    {"source": "Donald Trump", "target": "Donald-Ivana"},
+    {"source": "Ivana Trump",  "target": "Donald-Ivana"},
+
+    {"source": "Donald-Ivana", "target": "Donald Trump Jr"},
+    {"source": "Donald-Ivana", "target": "Ivanka Trump"},
+    {"source": "Donald-Ivana", "target": "Eric Trump"},
+
+    {"source": "Donald Trump Jr", "target": "DonaldJr-Vanessa"},
+    {"source": "Vanessa Trump",   "target": "DonaldJr-Vanessa"},
+
+    {"source": "DonaldJr-Vanessa", "target": "Kai Madison"},
+    {"source": "DonaldJr-Vanessa", "target": "Donald III"},
+    {"source": "DonaldJr-Vanessa", "target": "Chloe Sophia"},
+    {"source": "DonaldJr-Vanessa", "target": "Tristan Milos"},
+    {"source": "DonaldJr-Vanessa", "target": "Spencer Frederick"},
+
+    {"source": "Ivanka Trump",  "target": "Ivanka-Jared"},
+    {"source": "Jared Kushner", "target": "Ivanka-Jared"},
+
+    {"source": "Ivanka-Jared", "target": "Arabella Rose"},
+    {"source": "Ivanka-Jared", "target": "Joseph Frederick"},
+    {"source": "Ivanka-Jared", "target": "Theodore James"},
+    {"source": "Eric Trump",   "target": "Eric-Lara"},
+    {"source": "Lara Yunaska", "target": "Eric-Lara"},
+    {"source": "Donald Trump", "target": "Donald-Marla"},
+    {"source": "Marla Maples", "target": "Donald-Marla"},
+    {"source": "Donald-Marla", "target": "Tiffany Trump"},
+    {"source": "Donald Trump", "target": "Donald-Melanie"},
+    {"source": "Melanie Trump", "target": "Donald-Melanie"},
+    {"source": "Donald-Melanie", "target": "Baron Trump"}
+  ]
+}
