@@ -63,7 +63,7 @@ th {
   padding-bottom: 100px;
   padding-left: 40px;
   padding-right: 40px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .mono {
@@ -80,7 +80,6 @@ th {
 
 .vis {
   background: white;
-  margin-top: 20px;
   max-width: 1600px;
 }
 
@@ -96,16 +95,19 @@ th {
 .personBlood {
   fill: darkred;
   stroke: rgba(0,0,0,0.5);
+  stroke-width: 1px;
 }
 
 .personNotBlood {
   fill: lightgrey ;
   stroke: grey;
+  stroke-width: 1px;
 }
 
 .partnership {
-  fill: rgba(0,0,0,0);
-
+  fill: rgba(255,255,255,1);
+  stroke: black;
+  stroke-width: 4px;
 }
 
 .linkOff {

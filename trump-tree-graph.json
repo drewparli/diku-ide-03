@@ -31,6 +31,10 @@
     {"source": "Donald Trump", "target": "Donald-Ivana"},
     {"source": "Ivana Trump",  "target": "Donald-Ivana"},
 
+    {"source": "Donald Trump", "target": "Ivana Trump"},
+    {"source": "Donald Trump", "target": "Marla Maples"},
+    {"source": "Donald Trump", "target": "Melanie Trump"},
+
     {"source": "Donald-Ivana", "target": "Donald Trump Jr"},
     {"source": "Donald-Ivana", "target": "Ivanka Trump"},
     {"source": "Donald-Ivana", "target": "Eric Trump"},

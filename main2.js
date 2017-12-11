@@ -15,8 +15,10 @@ function visualize(data) {
           d3.forceLink()
             .id(function(d) {return d.name})
             .strength(3))
-    .force("collide", d3.forceCollide().radius(function(d) {return d.gen*24}).iterations(100))
-    .force("charge", d3.forceManyBody().strength(-200))
+    .force("collide", d3.forceCollide()
+                        .radius(function(d) {return d.gen*24})
+                        .iterations(90))
+    .force("charge", d3.forceManyBody().strength(-1200))
     .force("center", d3.forceCenter(1600/2, 800/2))
     .force("y", d3.forceY(0))
     .force("x", d3.forceX(0))
@@ -49,13 +51,16 @@ function visualize(data) {
     .attr("class", "node")
 
   node.append("circle")
-    .attr("r", function(d) {return d.gen * 10})
+    .attr("r", function(d) {
+        if (d.type == "partnership") {return 5}
+        else {return d.gen * 8}
+    })
     .attr("class", function(d) {
       if (d.type == "person") {
         if (d.blood) {return "personBlood"} else {return "personNotBlood"}
       } else {return "partnership"}
     })
-    .style("stroke-width", function(d) { return 1 })
+    .style("stroke-width", function(d) { if (d.type == "partnership") {return 4}})
 
   node.append("text")
     .attr("class", "name mono")
