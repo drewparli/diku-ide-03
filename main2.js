@@ -8,7 +8,8 @@ function visualize(data) {
 
   console.log("Data", data)
 
-  var colors = d3.scaleOrdinal(d3.schemeCategory10)
+  // var colors = d3.scaleOrdinal(d3.schemeCategory10)
+  var colors = d3.interpolateReds
 
   var simulation = d3.forceSimulation()
     .force("link",
@@ -65,7 +66,7 @@ function visualize(data) {
     })
     .style("stroke", function(d) {
       if (d.type == "partnership") {return "rgba(0,0,0,1)"}
-        else {return colors(d.gen)}
+        else {return colors(d.gen / 3)}
     })
     .style("stroke-width", function(d) {
       if (d.type == "partnership") {return 3}
@@ -74,7 +75,7 @@ function visualize(data) {
     })
     .style("fill", function(d) {
       if (d.type == "partnership") {return "rgba(255, 255, 255, 1)"}
-        else {if (d.blood) {return colors(d.gen)} else {return "white"}
+        else {if (d.blood) {return colors(d.gen / 3)} else {return "white"}
       }
     })
 
