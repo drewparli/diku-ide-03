@@ -4,12 +4,12 @@
   <head>
     <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
-    <title>IDE Assignment 2</title>
+    <title>IDE Assignment 3</title>
   </head>
 
   <body class="report">
     <div class="content">
-    <h1>Project 2: Temperature Data</h1>
+    <h1>Project 3: Trees</h1>
     <p>Our group is comprised of the following members:</p>
     <table border="1">
       <tr>
@@ -30,90 +30,20 @@
       </tr>
     </table>
 
-    <!-- <p> Choose one or more stations near where you grew up (or any place you have a particular connection to) and submit a link to a homepage that answers the following main question: How has the weather changed over the past 100 years? If group members don't come from the same place, feel free to analyse only one location or all of them as you see fit. Start with only temperature data, but feel free to include other data sources (such as precipitation or wind) if time permits.</p> -->
-
     <h2>Visualization Overview</h2>
 
-    <p>For this project, we created the two visualizations show below.</p>
+    <p>For this project, we created the family tree of the Trump family.</p>
 
-    <p>The first visualization is a standard line graph, which shows the monthly average temperatures. The first element of the visualization is a highlighted polygonal area, representing the mininmum and maximum average temperatures for each month. The next element is the collection of light grey lines. Each line represents a single year of data. The final element is a highlighted line (dark red), which allows a viewer to differentiate a single year of data from the other years. This element is changed by clicking on a row of cells in the second visualization. If data was missing, then that line segment is not drawn.</p>
-
-    <p>The second visualization is a heat map, which shows the deviation from each months mean temperature. Each column is a month, specifically the month labeled directly above it. The color scale is a deviation scale from blue for minus deviation to red for positive deviation. Missing data is colored in grey. Each row is clickable, so that a viewer can see the corresponding temperature data in the first visualization.</p>
-
-    <a href="vis.html" target="_blank"> <img src="vis.jpg"></a>
-
-
-    <h2>Motivation</h2>
-    The motivation for this project was to show how the weather (in terms of temperature) has changed over the past 100 years. Current research indicates that global warming has impacted weather patterns across the Earth, therefore, we would expect the data to show a warming trend in our heat map visualization.
-
-
-    <h2>Method</h2>
-    <p>For this assignment we used the historical temperature data for Copenhagen, Denmark available at <a class="mono" href="http://data.giss.nasa.gov/gistemp/station_data/" target="_blank">http://data.giss.nasa.gov/gistemp/station_data/</a>. From this dataset, we used the monthly average temperature data for each of the years provided, 1880 to 2017. There are a few missing data points, which are represented as <span class="mono">999.9</span>, therefore we have checked for these missing values in our implementation logic.</p>
-
-    <p>We started by using the Python script <span class="mono">mkCSV.py</span> to convert the data to a <span class="mono">.csv</span> file that is easier for <span class="mono">d3</span> to parse. After reading the data in our <span class="mono">d3</span> javascript, we do some preprocessing of the data:
-        <ol>
-            <li>the minimum and maximum temperature for each year</li>
-            <li>the minimum and maximum temperature for each month across all years</li>
-            <li>the mean temperature for each month for 1880 to 1979</li>
-            <li>the deviation of each month's average temperature from the mean.</li>
-        </ol>
-    </p>
-
-
-    <h2>Results</h2>
-    <p>After processing and visualizing the temperature data for Copenhagen, we can see that there is a general warming trend, especially if we look at the heat map visualization. Here we see that the deviation from the mean has become larger (i.e., warmer) when compared to the historical range (i.e., 1880 to 1979). This is especially true for the winter months (i.e., Dec-Mar).</p>
-
+    <a href="vis2.html" target="_blank"> <img src="vis.jpg"></a>
 
     <h2>Discussion</h2>
-    <p>In general, we are pleased with the result of our visualization. However, we do admit that the rows of the heat map are rather small in height and therefore more difficult to click on. We choose to maintain the small height in order to see the entire range at once on screen. This allows a viewer to see the trend in context, instead of a viewer having to scroll up and down through the heat map. One solution for the click interaction problem could be to change the implementation so that users could either enter a year in a form box or could scroll through the range of years.</p>
 
-    <p>Another element we thought of adding, but did not have time to do, was to add a new line graph to the left of the first visualization, which only shows the mean yearly temperature. Then under that line graph have an extra column in the heat map that is colored by the deviation from the yearly mean. We would expect this to help strengthen the arguement that the tendency is that the average temperature is rising.</p>
+    <p class="question">1. Motivate your choices (e.g. choice of color/marks, overall layout etc).</p>
+    <p>(TBD)</p>
 
-
-    <h2>Individual Responses</h2>
-
-    <p class="question">Which data set (that is realistically possible for you to obtain) and visualization would you include to give a more confident answer to the articles main question? A mockup is welcome.</p>
-    <p>(???)</p>
-
-    <p class="question">So far we've only taught static visualizations. Which dynamic elements or interactions could improve your article? A mockup is welcome.</p>
-
-    <p>As part of our visualization, we tried to provide a dynamic element by allowing the user to select a specific year of temperature data that is then highlighted in the line graph. Another element could be to update a box containing interesting data, such as the current year, its mean temperature, the minimum and maximum temperatures. This data would then be updated as a view clicked on different years. It could also be nice to have some buttons that would highlight specific types of data in the line graph, for example a button to overlay the mean temperature line for the historic range of data (i.e., 1880 to 1979), or a button to draw the current year's mean temperature.</p>
-
-    <p>(Andrew)</p>
-
-    <p class="question">How big data sets are reasonable to load in d3
-    visualizations? What types of visualizations does a limit like that
-    exclude? Give examples of visualizations that must be based on large data
-    sets and discuss how they deal with this. Could you have reduced the size
-    of the data sets in this assignment?</p>
-
-    <p>Without having tested the limits of d3 as part of the question, there
-    are two types of limits: computation efficiency and information overload.
-    d3 is likely optimized to perform very well in the context it has to, but
-    too many SVG point renderings very likely deteriorate performance because
-    DOM handling is expensive and SVG rendering is not hardware accelerated.
-    Regarding information overload, one should be careful in rendering data in
-    too much detail. When data points become too granular or start overlapping
-    the information becomes meaningless as it makes it hard to make out
-    patterns.</p>
-
-    <p>Data sets which deal with large data sets might include population data,
-    image data, biological or astronomic data and aggregated information (like
-    books, corpora, and search query databases) amongst others. The main method
-    of visualizating these datasets is realizing the narrative one wants to
-    present: what about the data is interesting? Or said otherwise, what
-    abstraction should be employed to present the narrative in a clear way?
-    Doing this results in a decrease in the data dimensions and density, which
-    solves both problems.</p>
-
-    <p>This project did not have an excessive amount of data to start with, so
-    there is no reason to consider cutting the cruft away. The visualization
-    would still be reasonable if we did a stride in the list of years and it
-    would perhaps make the standard deviation comparison graph more succint,
-    but there does not feel an inherent need for it.</p>
-
-    <p>(Petur)</p>
-
+    <p class="question">2. Suggest how/if the visualization could be improved by adding interactive elements.</p>
+    <p>(TBD)</p>
+    
     </div>
   </body>
 
