@@ -83,13 +83,7 @@ function visualize(data) {
     .attr("transform", function(d) {return "translate(" + 0 + "," + (d.gen*12 + 10) + ")" })
     .text(function(d) {if (d.type == "partnership") {return ""} else {return d.name}})
     .style("text-anchor", "middle")
-    .style("font-size", function(d) {return "" + ((d.gen * 1.5) + 5) + "pt"})
-
-  // link.on("mouseover", function(l) {
-  //     node.attr("class", function(n) {
-  //       console.log(l,n); return "linkOn"})
-  //     })
-
+    .style("font-size", function(d) {return "" + ((d.gen * 1.5) + 6) + "pt"})
 
   simulation
     .nodes(data.nodes)
@@ -116,8 +110,7 @@ function visualize(data) {
       .attr("y2", function(d) { return d.target.y; });
 
     node
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"})
-      // .attr("cy", function(d) { return d.y; })
+      .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"})
   }
 
 }
