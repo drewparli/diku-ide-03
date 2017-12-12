@@ -69,11 +69,13 @@ function visualize(data) {
     })
     .style("stroke-width", function(d) {
       if (d.type == "partnership") {return 3}
-        else {return 0}
+        else {if (d.blood) {return 0} else {return 2}
+      }
     })
     .style("fill", function(d) {
       if (d.type == "partnership") {return "rgba(255, 255, 255, 1)"}
-        else {var c = colors(d.gen); console.log(c); return colors(d.gen)}
+        else {if (d.blood) {return colors(d.gen)} else {return "white"}
+      }
     })
 
   node.append("text")
