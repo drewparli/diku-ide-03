@@ -58,7 +58,28 @@
     <h2>Discussion</h2>
 
     <p class="question"><i>1. Motivate your choices (e.g. choice of color/marks, overall layout etc).</i></p>
-    <p>(TBD)</p>
+	    
+    <p>Since we show a representation of the Trump's family tree, we decided to use empty circles for people who are not
+	    related to Trump's family by blood line. A small empty black circle with grey lines to people identifies a family.</p>
+	    
+    <p>Different color for circles were chosen according to a generation. We decided to use a saturation 
+	    of red color, i.e., lighter color stands for younger generation. In this way, it is easier to find,
+	    for example, a child or grandchild, because chroma is perceived as ordered list unlike hue.
+	    Also by using different colors for each generation we would end up with too colorful family tree
+	    with no connection between colors.</p>
+	    
+    <p>In addition to this, some people are color blind so different colors are not helpful for them
+	    while separating generations. We tested our red color choice against a color-blind simulator 
+	    in <a href="http://www.rehue.net">www.rehue.net<a/>. As it can be seen from <b>Figure 1</b> and <b>Figure 2</b>, 
+	    colorful circles cause problems as two different colors, e.g., second image in <b>Figure 2</b>, 
+	    are understood as the same color.</p>
+
+    <p>However color saturation is not the best option either, if we have a lot of generations.
+	    In this case, it is worth considering having different type of tree like the one in 
+	    <a href="http://bl.ocks.org/robschmuecker/7926762">http://bl.ocks.org/robschmuecker/7926762<a/> 
+            where you can collapse or expand nodes.</p>
+
+    <p>To make the separation between generations even more obvious we chose different sizes of circle as well.</p>
 	
     <figure>
       <img src="vis.PNG" width="140" height="140">
@@ -67,7 +88,7 @@
       <figcaption>Figure 1. A chosen version of a family tree perceived by people with a normal vision, red blindness and green blindness. Tested against a web color blindness simulator in <a href="http://www.rehue.net">www.rehue.net<a/>.</figcaption>
     </figure>
 
-	<figure>
+    <figure>
       <img src="vis_old.PNG" width="140" height="140">
       <img src="vis_old_red_blindness.png" width="140" height="140">
       <img src="vis_old_green_blindness.png" width="140" height="140">
