@@ -57,6 +57,13 @@ th {
   text-align: left;
 }
 
+figcaption {
+  color: black;
+  font-size: small;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
 .content {
   background: white;
   padding-top: 40px;

@@ -34,16 +34,52 @@
 
     <p>For this project, we created the family tree of the Trump family.</p>
 
-    <a href="vis2.html" target="_blank"> <img src="vis.jpg"></a>
+    <p>The given data set was changed by creating the new data structure:</p>
+    <ul>
+      <li>Each <text class="mono">node</text> has 4 attributes:
+        <ul>
+          <li><text class="mono">name</text>: name of a person or a partnership, i.e., two people's names separated by a dash</li>
+          <li><text class="mono">gen</text>: number for a generation (3 identifies a root node, 2 - a child, and so on). Numbers go in a decreasing order</li>
+          <li><text class="mono">blood</text>: true identifies that a person is related by a blood line to the Trump's family</li>
+          <li><text class="mono">type</text>: person | partnership</li>
+        </ul>
+      </li>
+      <li>Each <text class="mono">link</text> has 3 attributes:
+        <ul>
+          <li><text class="mono">source</text>: where a line comes from</li>
+          <li><text class="mono">target</text>: where a line goes to</li>
+          <li><text class="mono">hidden</text>: true identifies that a link is not visible</li>
+        </ul>
+      </li>
+    </ul>
+
+    <a href="vis2.html" target="_blank"><img src="vis.png"></a>
 
     <h2>Discussion</h2>
 
-    <p class="question">1. Motivate your choices (e.g. choice of color/marks, overall layout etc).</p>
+    <p class="question"><i>1. Motivate your choices (e.g. choice of color/marks, overall layout etc).</i></p>
     <p>(TBD)</p>
+	
+    <figure>
+      <img src="vis.png" width="140" height="140">
+      <img src="vis_red_blindness.png" width="140" height="140">
+      <img src="vis_green_blindness.png" width="140" height="140">
+      <figcaption>Figure 1. A chosen version of a family tree perceived by people with a normal vision, red blindness and green blindness. Tested against a web color blindness simulator in <a href="http://www.rehue.net">www.rehue.net<a/>.</figcaption>
+    </figure>
 
-    <p class="question">2. Suggest how/if the visualization could be improved by adding interactive elements.</p>
-    <p>(TBD)</p>
-    
+	<figure>
+      <img src="vis_old.png" width="140" height="140">
+      <img src="vis_old_red_blindness.png" width="140" height="140">
+      <img src="vis_old_green_blindness.png" width="140" height="140">
+      <figcaption>Figure 2. A previous version of a family tree perceived by people with a normal vision, red blindness and green blindness. Tested against a web color blindness simulator in <a href="http://www.rehue.net">www.rehue.net<a/>.</figcaption>
+    </figure>
+	
+    <p class="question"><i>2. Suggest how/if the visualization could be improved by adding interactive elements.</i></p>
+    <p>When you press on a bubble, i.e., a person, the blood line would be signified and additional information, for example, birthday, image of a person, shown. See an example in Figure 3.</p>
+    <figure>
+      <img src="vis_when_pressed.png">
+      <figcaption>Figure 3. The view of an interactive family tree when you press on Donald III.</figcaption>
+    </figure>
     </div>
   </body>
 
